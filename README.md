@@ -23,6 +23,8 @@
 <br clear="left"/>
 <br>
 <ins><strong>How?</strong></ins>
+<br>
+<br>
 <p float="left">
 <img src="https://github.com/user-attachments/assets/01e82792-08e0-44fc-a357-ff0a9476f220" align="left" width="200px"/>
 <img src="https://github.com/user-attachments/assets/424fcf08-fc7a-4a18-b14a-8da6eaeb83a6" align="left" width="200px"/>
@@ -33,6 +35,8 @@
 <br clear="left"/>
 <br>
 <ins><strong>Results</strong></ins>
+<br>
+<br>
 <p float="left">
 <img src="https://github.com/user-attachments/assets/f4759b9b-80f6-4a86-81a2-c6d47826a502" align="left" width="200px"/>
 <img src="https://github.com/user-attachments/assets/07cb7862-c642-447f-a29a-c00558490cee" align="left" width="200px"/>
@@ -58,6 +62,8 @@
 <br clear="left"/>
 <br>
 <ins><strong>How?</strong></ins>
+<br>
+<br>
 <p float="left">
 <img src="https://github.com/user-attachments/assets/e2b3fc9a-bbc7-4730-995b-28aab8c020de" align="left" width="200px"/>
 <img src="https://github.com/user-attachments/assets/0fd1bf9e-21eb-4c07-9a76-b47a8a47ac64" align="left" width="250px"/>
@@ -68,6 +74,8 @@
 <br clear="left"/>
 <br>
 <ins><strong>Results</strong></ins>
+<br>
+<br>
 <p float="left">
 <img src="https://github.com/user-attachments/assets/9fadffe6-3041-4d46-b8b0-33497d6015f3" align="left" width="250px"/>
 </p>
@@ -91,6 +99,8 @@
 <br clear="left"/>
 <br>
 <ins><strong>How?</strong></ins>
+<br>
+<br>
 <p float="left">
 <img src="https://github.com/user-attachments/assets/01e82792-08e0-44fc-a357-ff0a9476f220" align="left" width="200px"/>
 <img src="https://github.com/user-attachments/assets/424fcf08-fc7a-4a18-b14a-8da6eaeb83a6" align="left" width="200px"/>
@@ -101,6 +111,8 @@
 <br clear="left"/>
 <br>
 <ins><strong>Results</strong></ins>
+<br>
+<br>
 <p float="left">
 <img src="https://github.com/user-attachments/assets/f4759b9b-80f6-4a86-81a2-c6d47826a502" align="left" width="200px"/>
 <img src="https://github.com/user-attachments/assets/07cb7862-c642-447f-a29a-c00558490cee" align="left" width="200px"/>
