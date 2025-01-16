@@ -1,6 +1,6 @@
 ## Education
 
-<img src="https://www.clo-ocol.gc.ca/sites/default/files/styles/large/public/sfu-block-logo.svg.jpg?itok=ksBivry2" align="left" width="200px"/>
+<img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" align="left" width="200px"/>
 <strong>Simon Fraser University</strong><br>
     BASc in Mechatronic Systems Engineering<br>
     <em>September 2022 - December 2027</em>
