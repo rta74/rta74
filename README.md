@@ -42,27 +42,33 @@
 <br>
 <br>
 ### What?
-<img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" align="left" width="200px"/>
-<strong>Simon Fraser University</strong><br>
-    BASc in Mechatronic Systems Engineering<br>
-    <em>September 2022 - December 2027</em>
+<br>
+<br>
+<img src="https://s3.us-east-1.amazonaws.com/craft-marinbikes/images/2020/bikes/grid/_bikesBikeGrid1x/2021_Terra_Linda_3_Grid.jpg" align="left" width="200px"/>
+    • Conduct a complete analysis of a bike frame through solidworks <br> <br>
+    • Assess the structure, propose and test possible improvements to the frame <br>
 <br clear="left"/>
 <br>
 ### How?
-<img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" align="left" width="200px"/>
-<strong>Simon Fraser University</strong><br>
-    BASc in Mechatronic Systems Engineering<br>
-    <em>September 2022 - December 2027</em>
+<p float="left">
+<img src="https://github.com/user-attachments/assets/e2b3fc9a-bbc7-4730-995b-28aab8c020de" align="left" width="200px"/>
+<img src="https://github.com/user-attachments/assets/0fd1bf9e-21eb-4c07-9a76-b47a8a47ac64" align="left" width="200px"/>
+</p>
+    • Simulated FEA through solidworks identifying failure conditions and frame fatigue strength under stress conditions<br>
+    • Conducted root cause analysis on frames to evaluate faults and their feasibility <br>
+    • Proposed changes to frame and conducted truss beam stresses, forces, and safety factors on both frames <br>
 <br clear="left"/>
 <br>
 ### Results
-<img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" align="left" width="200px"/>
-<strong>Simon Fraser University</strong><br>
-    BASc in Mechatronic Systems Engineering<br>
-    <em>September 2022 - December 2027</em>
+<p float="left">
+<img src="https://github.com/user-attachments/assets/9fadffe6-3041-4d46-b8b0-33497d6015f3" align="left" width="200px"/>
+</p>
+    • By increasing the diameter and thickness of the beams the safety factor was able to go up by almost 2.5 times while preserving the bikes original geometry to ensure similar handling <br>
 <br clear="left"/>
+
 <br>
 <br>
+
 
 ## Auto Fetch
 
@@ -81,7 +87,7 @@
 <img src="https://github.com/user-attachments/assets/01e82792-08e0-44fc-a357-ff0a9476f220" align="left" width="200px"/>
 <img src="https://github.com/user-attachments/assets/424fcf08-fc7a-4a18-b14a-8da6eaeb83a6" align="left" width="200px"/>
 </p>
-    • Used solid works to create 3D systems and mechanisms<br>
+    • Used solidworks to create 3D systems and mechanisms<br>
     • Applied GD&T principles to all drawings <br>
     • Applied self fastening features to fixtures, optimizing design and improving DFM and DFA <br>
 <br clear="left"/>
