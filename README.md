@@ -9,7 +9,9 @@
 # Technical Projects
 <br>
 <br>
+<br>
 ## Characterization of Active Components
+<br>
 <br>
 ### What?
 <br>
