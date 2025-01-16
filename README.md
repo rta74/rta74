@@ -12,6 +12,7 @@
 ## Characterization of Active Components
 <br>
 ### What?
+<br>
 <img src="https://github.com/user-attachments/assets/c6b5874a-aebd-4de0-bc3c-ebc7aa962dc4" align="left" width="200px"/>
     • Design and prototype a device that makes interacting with dogs easier for people with physical limitations <br>
     • Initiated design process by applying a needs analysis, then applying lean manufacturing principles to optimize design by prioritizing key fixtures<br>
