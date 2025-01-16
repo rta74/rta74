@@ -5,6 +5,6 @@
   <div>
     <strong>Simon Fraser University</strong><br>
     BASc in Mechatronic Systems Engineering<br>
-    <em>September 2022 - December 2027</em>
+    <em>Septr 2027</em>
   </div>
 </div>
