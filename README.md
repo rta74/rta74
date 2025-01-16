@@ -22,7 +22,7 @@
     • Initiated design process by applying a needs analysis, then applying lean manufacturing principles to optimize design by prioritizing key fixtures<br>
 <br clear="left"/>
 <br>
-### How?
+<ins><strong>How?</strong></ins>
 <p float="left">
 <img src="https://github.com/user-attachments/assets/01e82792-08e0-44fc-a357-ff0a9476f220" align="left" width="200px"/>
 <img src="https://github.com/user-attachments/assets/424fcf08-fc7a-4a18-b14a-8da6eaeb83a6" align="left" width="200px"/>
@@ -32,7 +32,7 @@
     • Applied self fastening features to fixtures, optimizing design and improving DFM and DFA <br>
 <br clear="left"/>
 <br>
-### Results
+<ins><strong>Results</strong></ins>
 <p float="left">
 <img src="https://github.com/user-attachments/assets/f4759b9b-80f6-4a86-81a2-c6d47826a502" align="left" width="200px"/>
 <img src="https://github.com/user-attachments/assets/07cb7862-c642-447f-a29a-c00558490cee" align="left" width="200px"/>
@@ -49,7 +49,7 @@
 ## Bike Frame Analysis
 <br>
 <br>
-### What?
+<ins><strong>What?</strong></ins>
 <br>
 <br>
 <img src="https://s3.us-east-1.amazonaws.com/craft-marinbikes/images/2020/bikes/grid/_bikesBikeGrid1x/2021_Terra_Linda_3_Grid.jpg" align="left" width="250px"/>
@@ -57,7 +57,7 @@
     • Assess the structure, propose and test possible improvements to the frame <br>
 <br clear="left"/>
 <br>
-### How?
+<ins><strong>How?</strong></ins>
 <p float="left">
 <img src="https://github.com/user-attachments/assets/e2b3fc9a-bbc7-4730-995b-28aab8c020de" align="left" width="200px"/>
 <img src="https://github.com/user-attachments/assets/0fd1bf9e-21eb-4c07-9a76-b47a8a47ac64" align="left" width="250px"/>
@@ -67,7 +67,7 @@
     • Proposed changes to frame and conducted truss beam calculations <br>
 <br clear="left"/>
 <br>
-### Results
+<ins><strong>Results</strong></ins>
 <p float="left">
 <img src="https://github.com/user-attachments/assets/9fadffe6-3041-4d46-b8b0-33497d6015f3" align="left" width="250px"/>
 </p>
@@ -82,7 +82,7 @@
 
 <br>
 <br>
-### What?
+<ins><strong>What?</strong></ins>
 <br>
 <br>
 <img src="https://github.com/user-attachments/assets/c6b5874a-aebd-4de0-bc3c-ebc7aa962dc4" align="left" width="200px"/>
@@ -90,7 +90,7 @@
     • Initiated design process by applying a needs analysis, then applying lean manufacturing principles to optimize design by prioritizing key fixtures<br>
 <br clear="left"/>
 <br>
-### How?
+<ins><strong>How?</strong></ins>
 <p float="left">
 <img src="https://github.com/user-attachments/assets/01e82792-08e0-44fc-a357-ff0a9476f220" align="left" width="200px"/>
 <img src="https://github.com/user-attachments/assets/424fcf08-fc7a-4a18-b14a-8da6eaeb83a6" align="left" width="200px"/>
@@ -100,7 +100,7 @@
     • Applied self fastening features to fixtures, optimizing design and improving DFM and DFA <br>
 <br clear="left"/>
 <br>
-### Results
+<ins><strong>Results</strong></ins>
 <p float="left">
 <img src="https://github.com/user-attachments/assets/f4759b9b-80f6-4a86-81a2-c6d47826a502" align="left" width="200px"/>
 <img src="https://github.com/user-attachments/assets/07cb7862-c642-447f-a29a-c00558490cee" align="left" width="200px"/>
