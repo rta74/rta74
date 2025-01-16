@@ -81,7 +81,7 @@
 </p>
     • Used solid works to create 3D systems and mechanisms<br>
     • Applied GD&T principles to all drawings <br>
-    • Applied self fastening features to fixtures, optimizing design and improving DFM AND DFA <br>
+    • Applied self fastening features to fixtures, optimizing design and improving DFM and DFA <br>
 <br clear="left"/>
 <br>
 ### Results
