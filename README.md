@@ -14,7 +14,7 @@
 ## Characterization of Active Components
 <br>
 <br>
-### What?
+<ins>**What?**</ins> 
 <br>
 <br>
 <img src="https://github.com/user-attachments/assets/c6b5874a-aebd-4de0-bc3c-ebc7aa962dc4" align="left" width="200px"/>
