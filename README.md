@@ -8,7 +8,6 @@
 
 # Technical Projects
 <br>
-<br>
 
 ## Characterization of Active Components
 <br>
@@ -38,6 +37,7 @@
 
 
 ## Bike Frame Analysis
+<br>
 <br>
 ### What?
 <img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" align="left" width="200px"/>
@@ -95,6 +95,7 @@
 <br>
 
 ## Go Kart Analysis
+<br>
 <br>
 ### What?
 <img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" align="left" width="200px"/>
