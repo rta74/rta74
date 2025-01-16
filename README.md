@@ -7,18 +7,23 @@
 <br clear="left"/>
 
 ## Technical Projects
-<div style="display: flex; justify-content: flex-start; align-items: center;">
+<p float="left">
   <div style="text-align: center;">
-    <img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" width="100" />
+    <img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" width="200px" />
+    <br />
+    *enter text*
   </div>
-  
   <div style="text-align: center;">
-    <img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" width="100" />
+    <img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" width="200px" />
+    <br />
+    *enter text*
   </div>
-  
   <div style="text-align: center;">
-    <img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" width="100" />
+    <img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" width="200px" />
+    <br />
+    *enter text*
   </div>
-</div>
+</p>
+
 
 
