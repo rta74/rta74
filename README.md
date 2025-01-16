@@ -7,3 +7,11 @@
 <br clear="left"/>
 
 ## Technical Projects
+<p float="left">
+  <img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" width="100" />
+    afihbabfidhabfbiadbibfbadhf<br>
+  <img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" width="100" /> 
+    afihbabfidhabfbiadbibfbadhf<br>
+  <img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" width="100" />
+    afihbabfidhabfbiadbibfbadhf<br>
+</p>
