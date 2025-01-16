@@ -44,7 +44,7 @@
 ### What?
 <br>
 <br>
-<img src="https://s3.us-east-1.amazonaws.com/craft-marinbikes/images/2020/bikes/grid/_bikesBikeGrid1x/2021_Terra_Linda_3_Grid.jpg" align="left" width="200px"/>
+<img src="https://s3.us-east-1.amazonaws.com/craft-marinbikes/images/2020/bikes/grid/_bikesBikeGrid1x/2021_Terra_Linda_3_Grid.jpg" align="left" width="250px"/>
     • Conduct a complete analysis of a bike frame through solidworks <br> <br>
     • Assess the structure, propose and test possible improvements to the frame <br>
 <br clear="left"/>
@@ -61,7 +61,7 @@
 <br>
 ### Results
 <p float="left">
-<img src="https://github.com/user-attachments/assets/9fadffe6-3041-4d46-b8b0-33497d6015f3" align="left" width="200px"/>
+<img src="https://github.com/user-attachments/assets/9fadffe6-3041-4d46-b8b0-33497d6015f3" align="left" width="250px"/>
 </p>
     • By increasing the diameter and thickness of the beams the safety factor was able to go up by almost 2.5 times while preserving the bikes original geometry to ensure similar handling <br>
 <br clear="left"/>
