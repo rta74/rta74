@@ -1,6 +1,6 @@
 ## Education
 
-<div style="display: flex; align-items: center;">
+<div style="display: flex; align-items: left;">
   <img src="https://www.sfu.ca/favicon.ico" alt="SFU Logo" width="100" height="100" 60000px;">
   <div>
     <strong>Simon Fraser University</strong><br>
