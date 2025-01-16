@@ -56,7 +56,7 @@
 </p>
     • Simulated FEA through solidworks identifying failure conditions and frame fatigue strength under stress conditions<br>
     • Conducted root cause analysis on frames to evaluate faults and their feasibility <br>
-    • Proposed changes to frame and conducted truss beam stresses, forces, and safety factors on both frames <br>
+    • Proposed changes to frame and conducted truss beam stresses, forces, and <br> safety factors on both frames <br>
 <br clear="left"/>
 <br>
 ### Results
