@@ -5,6 +5,8 @@
     BASc in Mechatronic Systems Engineering<br>
     <em>September 2022 - December 2027</em>
 <br clear="left"/>
+<br>
+<br>
 
 # Technical Projects
 <br>
