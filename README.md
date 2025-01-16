@@ -8,3 +8,6 @@
 <p float="right" style="display: flex; align-items: flex-start;">
   <img src="https://www.sfu.ca/favicon.ico" alt="SFU Logo" width="100" height="100" style="margin-right: 15px;">
 </p>
+
+
+<img src="https://openclipart.org/image/2400px/svg_to_png/28580/kablam-Number-Animals-1.png" width="200"/> <img src="https://openclipart.org/download/71101/two.svg" width="300"/>
