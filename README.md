@@ -7,23 +7,21 @@
 <br clear="left"/>
 
 ## Technical Projects
-<p float="left">
+<div style="display: flex; justify-content: space-between;">
   <div style="text-align: center;">
     <img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" width="200px" />
-    <br />
-    *enter text*
+    <p>*enter text*</p>
   </div>
   <div style="text-align: center;">
     <img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" width="200px" />
-    <br />
-    *enter text*
+    <p>*enter text*</p>
   </div>
   <div style="text-align: center;">
     <img src="https://www.mhinnovation.net/sites/default/files/styles/logo_xxlarge/public/content/organisation/logo/2023-12/simon%20fraser%20uni.jpg.jpeg?itok=WtRFSnNE" width="200px" />
-    <br />
-    *enter text*
+    <p>*enter text*</p>
   </div>
-</p>
+</div>
+
 
 
 
