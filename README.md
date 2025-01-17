@@ -77,7 +77,7 @@
 <br>
 <br>
 <p float="left">
-<img src="https://github.com/user-attachments/assets/9fadffe6-3041-4d46-b8b0-33497d6015f3" align="left" width="390px"/>
+<img src="https://github.com/user-attachments/assets/9fadffe6-3041-4d46-b8b0-33497d6015f3" align="left" width="400px"/>
 </p>
     • By increasing the diameter and thickness of the beams the safety factor was able to go up by almost 2.5 times while preserving the bikes original geometry to ensure similar handling <br>
 <br clear="left"/>
