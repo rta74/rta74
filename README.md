@@ -66,7 +66,7 @@
 <br>
 <p float="left">
 <img src="https://github.com/user-attachments/assets/e2b3fc9a-bbc7-4730-995b-28aab8c020de" align="left" width="250px"/>
-<img src="https://github.com/user-attachments/assets/0fd1bf9e-21eb-4c07-9a76-b47a8a47ac64" align="left" width="280px" height="260px"/>
+<img src="https://github.com/user-attachments/assets/0fd1bf9e-21eb-4c07-9a76-b47a8a47ac64" align="left" width="280px" height="210px"/>
 </p>
     • Simulated FEA through solidworks identifying failure conditions and frame fatigue strength under stress conditions<br>
     • Conducted root cause analysis on frames to evaluate faults and their feasibility <br>
