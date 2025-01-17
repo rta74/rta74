@@ -40,7 +40,7 @@
 <br>
 <br>
 <p float="left">
-<img src="https://github.com/user-attachments/assets/727378d3-6d0c-4995-b1d6-56db155f44b3" align="left" width="300px"/>
+<img src="https://github.com/user-attachments/assets/727378d3-6d0c-4995-b1d6-56db155f44b3" align="left" width="330px"/>
 </p>
     • These experiments accomplished the characterization and performance evaluation of active components with a high degree of accuracy <br>
 <br clear="left"/>
