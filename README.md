@@ -22,7 +22,7 @@
 <img src="https://github.com/user-attachments/assets/bae71581-9097-4ac7-89ca-cba11b886236" align="left" width="250px"/>
 </p>
     • Analyze behaviour and performance of active components. Construct circuits, run simulations and tests to confirm behavior of diodes, bjt’s, and mosfets <br> <br>
-    • Began process by using an industry grade SPA machine to obtain and study I-V characteristics and parameters for the active components, then analyzed the given circuits for better understanding <br>
+    • Began process by using an industry grade SPA machine to obtain and study I-V characteristics and parameters for the active components, then analyzed the given circuits for better                                                                                         understanding <br>
 <br clear="left"/>
 <br>
 <ins><strong>How?</strong></ins>
