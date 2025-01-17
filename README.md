@@ -29,8 +29,8 @@
 <br>
 <br>
 <p float="left">
-<img src="https://github.com/user-attachments/assets/dd48e2be-677b-4d38-8ab9-b8ede24b1b0a" align="left" width="250px" height="250px"/>
-<img src="https://github.com/user-attachments/assets/2a8861b2-3864-4cdc-952b-55db30413feb" align="left" width="250px" height="250px"/>
+<img src="https://github.com/user-attachments/assets/dd48e2be-677b-4d38-8ab9-b8ede24b1b0a" align="left" width="250px" height="220px"/>
+<img src="https://github.com/user-attachments/assets/2a8861b2-3864-4cdc-952b-55db30413feb" align="left" width="250px" height="220px"/>
 </p>
     • Constructed many rectifier circuits to futher study diodes. Designed collector and emitter bjt amplifiers inorder to analyze small and large signal characteristics, further supported our findings with LT spice simulations<br><br>
     • Designed different configurations on CS NMOS amplifier with and without capacitors to acquire and compute small signal characteristics for MOSFETS, further analysis found Q point, frequency response, and voltage gain<br>
