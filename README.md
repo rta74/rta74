@@ -56,7 +56,7 @@
 <ins><strong>What?</strong></ins>
 <br>
 <br>
-<img src="https://s3.us-east-1.amazonaws.com/craft-marinbikes/images/2020/bikes/grid/_bikesBikeGrid1x/2021_Terra_Linda_3_Grid.jpg" align="left" width="250px"/>
+<img src="https://s3.us-east-1.amazonaws.com/craft-marinbikes/images/2020/bikes/grid/_bikesBikeGrid1x/2021_Terra_Linda_3_Grid.jpg" align="left" width="300px"/>
     • Conduct a complete analysis of a bike frame through solidworks <br> <br>
     • Assess the structure, propose and test possible improvements to the frame <br>
 <br clear="left"/>
