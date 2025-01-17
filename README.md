@@ -93,31 +93,32 @@
 <ins><strong>What?</strong></ins>
 <br>
 <br>
-<img src="https://github.com/user-attachments/assets/c6b5874a-aebd-4de0-bc3c-ebc7aa962dc4" align="left" width="200px"/>
+<img src="https://github.com/user-attachments/assets/c6b5874a-aebd-4de0-bc3c-ebc7aa962dc4" align="left" width="300px"/>
     • Design and prototype a device that makes interacting with dogs easier for people with physical limitations <br> <br>
     • Initiated design process by applying a needs analysis, then applying lean manufacturing principles to optimize design by prioritizing key fixtures<br>
 <br clear="left"/>
-<br>
+<br><br>
 <ins><strong>How?</strong></ins>
 <br>
 <br>
 <p float="left">
-<img src="https://github.com/user-attachments/assets/01e82792-08e0-44fc-a357-ff0a9476f220" align="left" width="200px"/>
-<img src="https://github.com/user-attachments/assets/424fcf08-fc7a-4a18-b14a-8da6eaeb83a6" align="left" width="200px"/>
+<img src="https://github.com/user-attachments/assets/01e82792-08e0-44fc-a357-ff0a9476f220" align="left" width="250px"/>
+<img src="https://github.com/user-attachments/assets/424fcf08-fc7a-4a18-b14a-8da6eaeb83a6" align="left" width="250px"/>
 </p>
-    • Used solidworks to create 3D systems and mechanisms<br>
-    • Applied GD&T principles to all drawings <br>
+    • Used solidworks to create 3D systems and mechanisms<br><br>
+    • Applied GD&T principles to all drawings <br><br>
     • Applied self fastening features to fixtures, optimizing design and improving DFM and DFA <br>
 <br clear="left"/>
+<br>
 <br>
 <ins><strong>Results</strong></ins>
 <br>
 <br>
 <p float="left">
-<img src="https://github.com/user-attachments/assets/f4759b9b-80f6-4a86-81a2-c6d47826a502" align="left" width="200px"/>
-<img src="https://github.com/user-attachments/assets/07cb7862-c642-447f-a29a-c00558490cee" align="left" width="200px"/>
+<img src="https://github.com/user-attachments/assets/f4759b9b-80f6-4a86-81a2-c6d47826a502" align="left" width="250px"/>
+<img src="https://github.com/user-attachments/assets/07cb7862-c642-447f-a29a-c00558490cee" align="left" width="250px"/>
 </p>
-    • The design fulfilled its purpose with the ability to shoot a ball in the range of 15m - 20m<br>
+    • The design fulfilled its purpose with the ability to shoot a ball in the range of 15m - 20m<br><br>
     • Motor power was limited for testing purposes but could be increased to acheive more distance <br>
 <br clear="left"/>
 
