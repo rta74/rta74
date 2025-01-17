@@ -60,7 +60,7 @@
     • Conduct a complete analysis of a bike frame through solidworks <br> <br>
     • Assess the structure, propose and test possible improvements to the frame <br>
 <br clear="left"/>
-<br>
+<br><br>
 <ins><strong>How?</strong></ins>
 <br>
 <br>
