@@ -131,9 +131,9 @@
 <br>
 
 <p float="left">
-<img src="https://github.com/user-attachments/assets/5111355f-1c9d-4444-82df-2a91acb9e8d7" align="left" width="250px"/>
-<img src="https://github.com/user-attachments/assets/0e814aeb-3295-48a6-bf5a-29a4c7fdecdf" align="left" width="250px"/>
-<img src="https://github.com/user-attachments/assets/691693e2-3e68-4628-964b-8b31125ecb2f" align="left" width="250px"/>
+<img src="https://github.com/user-attachments/assets/5111355f-1c9d-4444-82df-2a91acb9e8d7" align="left" width="300px"/>
+<img src="https://github.com/user-attachments/assets/0e814aeb-3295-48a6-bf5a-29a4c7fdecdf" align="left" width="330px"/>
+<img src="https://github.com/user-attachments/assets/691693e2-3e68-4628-964b-8b31125ecb2f" align="left" width="300px"/>
 </p>
 <br>
 <br>
