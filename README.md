@@ -131,7 +131,7 @@
 <br>
 
 <p float="left">
-<img src="https://github.com/user-attachments/assets/5111355f-1c9d-4444-82df-2a91acb9e8d7" align="left" width="450px"/>
+<img src="https://github.com/user-attachments/assets/5111355f-1c9d-4444-82df-2a91acb9e8d7" align="left" width="400px"/>
 <img src="https://github.com/user-attachments/assets/0e814aeb-3295-48a6-bf5a-29a4c7fdecdf" align="left" width="550px"/>
 </p>
 <br>
