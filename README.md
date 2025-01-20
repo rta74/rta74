@@ -135,6 +135,8 @@
 <img src="https://github.com/user-attachments/assets/0e814aeb-3295-48a6-bf5a-29a4c7fdecdf" align="left" width="250px"/>
 <img src="https://github.com/user-attachments/assets/691693e2-3e68-4628-964b-8b31125ecb2f" align="left" width="250px"/>
 </p>
+<br>
+<br>
     • Comprehensive transportation network analysis using ArcGIS, mapping
  and analyzing multi-modal transportation routes connecting the Lower Mainland to Olympic Village in
  Vancouver. This project required the collection, analysis, and synthesis of technical data for bus, SkyTrain, and
