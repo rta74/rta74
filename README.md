@@ -3,7 +3,7 @@
 <img src="https://github.com/user-attachments/assets/e6ddf91e-2698-40c4-82d1-8bc256f1ea28" align="left" width="400px"/>
 <strong>Simon Fraser University</strong><br>
     BASc in Mechatronic Systems Engineering<br>
-    <em>September 2022 - December 2027</em>
+    <em>September 2022 - Present</em>
 <br clear="left"/>
 <br>
 <br>
