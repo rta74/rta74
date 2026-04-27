@@ -698,11 +698,26 @@
           entry.target.classList.add('visible');
         }
       });
-    }, {
-      threshold: 0.35
+    }, { threshold: 0.25 });
+
+    document.querySelectorAll('.scene, .reveal').forEach((el) => observer.observe(el));
+
+    // PARALLAX + SCROLL ANIMATION
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+
+      document.querySelectorAll('.device-card').forEach((card, i) => {
+        const speed = 0.05 + i * 0.02;
+        card.style.transform = `translateY(${scrollY * speed * -1}px) scale(1)`;
+      });
+
+      document.querySelectorAll('.scene-text').forEach((text, i) => {
+        const speed = 0.03 + i * 0.01;
+        text.style.transform = `translateY(${scrollY * speed * -1}px)`;
+      });
     });
 
-    document.querySelectorAll('.scene, .reveal').forEach((element) => {
-      observer.observe(element);
-    });
-  </script>
+    //
+</body>
+</html>
+
