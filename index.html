@@ -3,23 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ryan Thomas | Mechatronics Engineering Portfolio</title>
+  <title>Ryan Thomas | Mechatronics Portfolio</title>
+
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    :root {
+      --bg: #f5f1e8;
+      --ink: #111111;
+      --muted: #5f5a50;
+      --card: #ffffff;
+      --line: #1d1d1d;
+      --yellow: #ffd84d;
+      --blue: #4da3ff;
+      --green: #7ed957;
+      --pink: #ff8fb3;
+      --orange: #ff9f45;
+      --purple: #a78bfa;
+      --radius-lg: 34px;
+      --radius-md: 22px;
+      --shadow: 8px 8px 0px #111111;
+      --shadow-small: 5px 5px 0px #111111;
     }
 
-    :root {
-      --bg: #000000;
-      --panel: #101014;
-      --panel-soft: rgba(255, 255, 255, 0.065);
-      --text: #f5f5f7;
-      --muted: #a1a1aa;
-      --blue: #2997ff;
-      --border: rgba(255, 255, 255, 0.11);
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     html {
@@ -27,9 +35,14 @@
     }
 
     body {
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.55;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(255, 216, 77, 0.35), transparent 28%),
+        radial-gradient(circle at 90% 18%, rgba(77, 163, 255, 0.22), transparent 30%),
+        radial-gradient(circle at 50% 90%, rgba(126, 217, 87, 0.20), transparent 35%),
+        var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
       overflow-x: hidden;
     }
 
@@ -38,396 +51,720 @@
       text-decoration: none;
     }
 
-    .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
-      background: rgba(0, 0, 0, 0.68);
-      backdrop-filter: blur(24px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    .nav-inner {
-      max-width: 1180px;
-      margin: auto;
-      padding: 14px 24px;
+    .container {
+      width: min(1120px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 2px solid var(--line);
+      border-radius: 999px;
+      padding: 9px 15px;
+      background: var(--card);
+      font-size: 0.9rem;
+      font-weight: 800;
+      box-shadow: var(--shadow-small);
+    }
+
+    .section-label {
+      font-size: 0.9rem;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: clamp(2.5rem, 7vw, 5.6rem);
+      line-height: 0.92;
+      letter-spacing: -0.07em;
+      max-width: 900px;
+    }
+
+    .section-copy {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      max-width: 760px;
+    }
+
+    .highlight-yellow { background: var(--yellow); }
+    .highlight-blue { background: var(--blue); }
+    .highlight-green { background: var(--green); }
+    .highlight-pink { background: var(--pink); }
+    .highlight-orange { background: var(--orange); }
+    .highlight-purple { background: var(--purple); }
+
+    /* NAV */
+
+    .nav-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 14px 0;
+      backdrop-filter: blur(16px);
+      background: rgba(245, 241, 232, 0.78);
+      border-bottom: 2px solid rgba(17, 17, 17, 0.08);
+    }
+
+    nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .brand {
-      font-size: 17px;
-      font-weight: 700;
-      letter-spacing: -0.03em;
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 950;
+      font-size: 1.1rem;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--line);
+      border-radius: 12px;
+      background: var(--yellow);
+      box-shadow: 4px 4px 0 var(--line);
+      transform: rotate(-4deg);
     }
 
     .nav-links {
       display: flex;
-      gap: 24px;
+      align-items: center;
+      gap: 10px;
+      list-style: none;
     }
 
     .nav-links a {
-      font-size: 13.5px;
-      color: #c7c7cc;
-      transition: color 0.2s ease;
+      display: inline-flex;
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: 0.2s ease;
     }
 
     .nav-links a:hover {
-      color: white;
+      background: var(--ink);
+      color: var(--bg);
     }
+
+    .mobile-note {
+      display: none;
+      font-weight: 850;
+      font-size: 0.95rem;
+    }
+
+    /* HERO */
 
     .hero {
-      min-height: 100vh;
+      min-height: 88vh;
       display: grid;
-      place-items: center;
-      padding: 120px 24px 70px;
-      text-align: center;
-      background:
-        radial-gradient(circle at 50% 15%, rgba(41, 151, 255, 0.36), transparent 28%),
-        radial-gradient(circle at 80% 80%, rgba(88, 86, 214, 0.24), transparent 30%),
-        #000;
+      align-items: center;
+      padding: 72px 0 46px;
     }
 
-    .hero-content {
-      max-width: 980px;
-      animation: heroRise 1s ease both;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 40px;
+      align-items: center;
     }
 
-    @keyframes heroRise {
-      from { opacity: 0; transform: translateY(28px); }
-      to { opacity: 1; transform: translateY(0); }
+    .hero h1 {
+      margin-top: 24px;
+      font-size: clamp(3.5rem, 11vw, 8.8rem);
+      line-height: 0.83;
+      letter-spacing: -0.09em;
     }
 
-    .eyebrow {
-      color: var(--blue);
-      font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 16px;
-      letter-spacing: 0.01em;
+    .hero h1 span {
+      display: inline-block;
+      border: 3px solid var(--line);
+      border-radius: 24px;
+      padding: 0.02em 0.13em 0.08em;
+      box-shadow: var(--shadow-small);
+      transform: rotate(-1deg);
     }
 
-    h1 {
-      font-size: clamp(50px, 9.5vw, 112px);
-      line-height: 0.92;
-      letter-spacing: -0.082em;
-      margin-bottom: 26px;
+    .hero-copy {
+      margin-top: 28px;
+      max-width: 680px;
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      color: var(--muted);
     }
 
-    .hero p {
-      max-width: 780px;
-      margin: 0 auto 34px;
-      color: #d1d1d6;
-      font-size: clamp(19px, 2.1vw, 26px);
-      letter-spacing: -0.03em;
-    }
-
-    .buttons {
+    .hero-actions {
       display: flex;
-      justify-content: center;
-      gap: 14px;
       flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 148px;
-      padding: 13px 22px;
+      gap: 10px;
+      border: 2px solid var(--line);
       border-radius: 999px;
-      font-size: 15px;
-      font-weight: 650;
-      transition: transform 0.25s ease, background 0.25s ease, border 0.25s ease;
+      padding: 14px 22px;
+      font-weight: 950;
+      box-shadow: var(--shadow-small);
+      transition: 0.18s ease;
+      cursor: pointer;
     }
 
     .btn:hover {
-      transform: translateY(-2px);
+      transform: translate(3px, 3px);
+      box-shadow: 2px 2px 0 var(--line);
     }
 
-    .btn-primary {
-      background: var(--blue);
-      color: white;
+    .btn-dark {
+      background: var(--ink);
+      color: var(--bg);
     }
 
-    .btn-primary:hover {
-      background: #0077ed;
+    .btn-light {
+      background: var(--card);
     }
 
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      color: white;
-    }
-
-    .showcase {
+    .hero-card {
+      border: 3px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--card);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      transform: rotate(1deg);
       position: relative;
-      background: #000;
     }
 
-    .scene {
-      min-height: 115vh;
-      display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
-      gap: 42px;
-      align-items: center;
-      max-width: 1180px;
-      margin: auto;
-      padding: 110px 24px;
-      position: sticky;
-      top: 0;
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 90px;
+      border: 3px solid var(--line);
+      border-radius: 28px;
+      background: var(--pink);
+      top: -28px;
+      right: -20px;
+      z-index: -1;
+      transform: rotate(12deg);
     }
 
-    .scene-text {
-      opacity: 0;
-      transform: translateY(40px) scale(0.98);
-      transition: opacity 0.8s ease, transform 0.8s ease;
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      border: 3px solid var(--line);
+      border-radius: 999px;
+      background: var(--green);
+      bottom: -26px;
+      left: -22px;
+      z-index: -1;
     }
 
-    .scene.visible .scene-text {
-      opacity: 1;
-      transform: translateY(0) scale(1);
+    .profile-box {
+      border: 2px solid var(--line);
+      border-radius: 26px;
+      overflow: hidden;
+      background: #f8f8f8;
     }
 
-    .scene-kicker {
-      color: var(--blue);
-      font-weight: 750;
-      margin-bottom: 14px;
-    }
-
-    .scene h2 {
-      font-size: clamp(38px, 6vw, 76px);
-      line-height: 0.96;
-      letter-spacing: -0.07em;
-      margin-bottom: 22px;
-    }
-
-    .scene p {
-      color: #c7c7cc;
-      font-size: clamp(18px, 1.8vw, 22px);
-      letter-spacing: -0.025em;
-      max-width: 560px;
-    }
-
-    .device-card {
-      min-height: 520px;
-      border-radius: 44px;
-      padding: 34px;
+    .profile-top {
+      height: 190px;
       background:
-        linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.04)),
-        radial-gradient(circle at 30% 15%, rgba(41, 151, 255, 0.26), transparent 32%);
-      border: 1px solid var(--border);
-      box-shadow: 0 40px 120px rgba(0, 0, 0, 0.55);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      opacity: 0;
-      transform: translateY(60px) rotateX(8deg) scale(0.94);
-      transition: opacity 0.9s ease, transform 0.9s ease;
-    }
-
-    .scene.visible .device-card {
-      opacity: 1;
-      transform: translateY(0) rotateX(0) scale(1);
-    }
-
-    .device-card h3 {
-      font-size: 29px;
-      letter-spacing: -0.05em;
-      margin-bottom: 12px;
-    }
-
-    .device-card p {
-      font-size: 16px;
-      color: #d1d1d6;
-    }
-
-    .metric-row {
+        linear-gradient(135deg, rgba(255,255,255,0.2), transparent),
+        repeating-linear-gradient(
+          -35deg,
+          var(--blue),
+          var(--blue) 18px,
+          var(--yellow) 18px,
+          var(--yellow) 36px
+        );
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 26px;
+      place-items: center;
     }
 
-    .metric {
-      padding: 20px;
-      border-radius: 24px;
-      background: rgba(0, 0, 0, 0.32);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    .profile-face {
+      width: 120px;
+      height: 120px;
+      border: 3px solid var(--line);
+      border-radius: 36px;
+      background: var(--card);
+      display: grid;
+      place-items: center;
+      font-size: 3.5rem;
+      font-weight: 950;
+      box-shadow: var(--shadow-small);
+      transform: rotate(-4deg);
     }
 
-    .metric strong {
-      display: block;
-      font-size: 28px;
-      letter-spacing: -0.05em;
+    .profile-content {
+      padding: 22px;
     }
 
-    .metric span {
-      color: #a1a1aa;
-      font-size: 13px;
+    .profile-content h2 {
+      font-size: 1.8rem;
+      line-height: 1;
+      letter-spacing: -0.04em;
     }
 
-    .content-section {
-      max-width: 1180px;
-      margin: auto;
-      padding: 105px 24px;
-    }
-
-    .section-heading {
-      margin-bottom: 38px;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(38px, 5.5vw, 70px);
-      letter-spacing: -0.07em;
-      line-height: 0.98;
-      margin-bottom: 14px;
-    }
-
-    .section-heading p {
+    .profile-content p {
       color: var(--muted);
-      font-size: 19px;
-      max-width: 760px;
+      margin-top: 10px;
+      font-weight: 650;
     }
 
-    .cards {
+    .stats {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 12px;
+      margin-top: 18px;
     }
 
-    .card {
-      min-height: 330px;
-      padding: 28px;
-      border-radius: 34px;
-      background: var(--panel-soft);
-      border: 1px solid var(--border);
-      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-7px);
-      border-color: rgba(41, 151, 255, 0.72);
-      background: rgba(255, 255, 255, 0.09);
-    }
-
-    .card h3 {
-      font-size: 25px;
-      letter-spacing: -0.05em;
-      line-height: 1.05;
-      margin-bottom: 13px;
-    }
-
-    .card p {
-      color: #c7c7cc;
-      font-size: 15.5px;
-    }
-
-    .tag-list {
+    .stat {
+      border: 2px solid var(--line);
+      border-radius: 18px;
+      padding: 13px 14px;
+      background: #fff8df;
       display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+      justify-content: space-between;
+      gap: 12px;
+      font-weight: 850;
+    }
+
+    .stat span:last-child {
+      color: var(--muted);
+      text-align: right;
+    }
+
+    /* MARQUEE */
+
+    .marquee {
+      border-top: 3px solid var(--line);
+      border-bottom: 3px solid var(--line);
+      background: var(--ink);
+      color: var(--bg);
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 18px 0;
       margin-top: 20px;
     }
 
-    .tag {
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.08);
-      color: #e5e5ea;
-      font-size: 12px;
+    .marquee-track {
+      display: inline-flex;
+      gap: 34px;
+      animation: move 28s linear infinite;
+      font-size: clamp(1.05rem, 2vw, 1.45rem);
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
-    .timeline {
+    .marquee-track span {
+      display: inline-flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    @keyframes move {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .about-card {
+      margin-top: 34px;
+      border: 3px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--card);
+      box-shadow: var(--shadow);
+      padding: clamp(24px, 4vw, 44px);
       display: grid;
-      gap: 16px;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 36px;
     }
 
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 230px 1fr;
-      gap: 28px;
-      padding: 28px;
-      border-radius: 30px;
-      background: var(--panel-soft);
-      border: 1px solid var(--border);
+    .about-card h3 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
     }
 
-    .time {
-      color: var(--blue);
-      font-weight: 760;
-    }
-
-    .timeline-item h3 {
-      font-size: 24px;
-      letter-spacing: -0.04em;
-      margin-bottom: 8px;
-    }
-
-    .timeline-item p {
-      color: #c7c7cc;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .skill {
-      text-align: center;
-      padding: 20px;
-      border-radius: 22px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      font-weight: 700;
-      color: #f5f5f7;
-    }
-
-    .contact {
-      text-align: center;
-      padding: 110px 24px 120px;
-      background:
-        radial-gradient(circle at top, rgba(41, 151, 255, 0.24), transparent 28%),
-        #000;
-    }
-
-    .contact-inner {
-      max-width: 850px;
-      margin: auto;
-      padding: 60px 30px;
-      border-radius: 42px;
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.035));
-      border: 1px solid var(--border);
-    }
-
-    .contact h2 {
-      font-size: clamp(40px, 6vw, 76px);
-      letter-spacing: -0.075em;
-      line-height: 0.96;
+    .about-card p {
+      color: var(--muted);
+      font-size: 1.1rem;
       margin-bottom: 16px;
     }
 
-    .contact p {
-      color: #c7c7cc;
-      font-size: 19px;
-      margin: 0 auto 28px;
+    /* THINGS I DO */
+
+    .things-grid {
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .thing-card {
+      border: 3px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--card);
+      box-shadow: var(--shadow-small);
+      padding: 24px;
+      min-height: 230px;
+      transition: 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .thing-card:hover {
+      transform: translateY(-6px) rotate(-1deg);
+    }
+
+    .thing-card:nth-child(even):hover {
+      transform: translateY(-6px) rotate(1deg);
+    }
+
+    .thing-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--line);
+      border-radius: 18px;
+      font-size: 1.45rem;
+      box-shadow: 4px 4px 0 var(--line);
+      margin-bottom: 22px;
+    }
+
+    .thing-card h3 {
+      font-size: 1.45rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
+
+    .thing-card p {
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    /* PROCESS */
+
+    .process-wrap {
+      border: 3px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: #101010;
+      color: var(--bg);
+      box-shadow: var(--shadow);
+      padding: clamp(24px, 4vw, 44px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .process-wrap::before {
+      content: "";
+      position: absolute;
+      inset: auto -60px -120px auto;
+      width: 280px;
+      height: 280px;
+      border-radius: 999px;
+      background: var(--blue);
+      opacity: 0.35;
+      filter: blur(4px);
+    }
+
+    .process-grid {
+      margin-top: 34px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      position: relative;
+    }
+
+    .process-card {
+      border: 2px solid rgba(245, 241, 232, 0.9);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .process-num {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: var(--ink);
+      font-weight: 950;
+      border: 2px solid var(--bg);
+      margin-bottom: 18px;
+    }
+
+    .process-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .process-card p {
+      color: rgba(245, 241, 232, 0.76);
+      font-weight: 600;
+    }
+
+    /* PROJECTS */
+
+    .projects-grid {
+      margin-top: 38px;
+      display: grid;
+      gap: 22px;
+    }
+
+    .project-card {
+      border: 3px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--card);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 0.78fr 1.22fr;
+      min-height: 330px;
+    }
+
+    .project-art {
+      border-right: 3px solid var(--line);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 300px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-art::after {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border: 3px solid var(--line);
+      border-radius: 48px;
+      right: -38px;
+      bottom: -40px;
+      background: rgba(255, 255, 255, 0.35);
+      transform: rotate(18deg);
+    }
+
+    .project-number {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border: 2px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+      font-weight: 950;
+      font-size: 1.25rem;
+      box-shadow: 4px 4px 0 var(--line);
+      z-index: 2;
+    }
+
+    .project-highlight {
+      z-index: 2;
+      font-size: clamp(2.2rem, 5vw, 4.4rem);
+      line-height: 0.9;
+      letter-spacing: -0.07em;
+      font-weight: 950;
+    }
+
+    .project-content {
+      padding: clamp(24px, 4vw, 38px);
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .tag {
+      display: inline-flex;
+      border: 2px solid var(--line);
+      border-radius: 999px;
+      background: #fff7d1;
+      padding: 7px 11px;
+      font-size: 0.82rem;
+      font-weight: 900;
+    }
+
+    .project-content h3 {
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 0.94;
+      letter-spacing: -0.065em;
+      margin-bottom: 16px;
+    }
+
+    .project-content p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin-bottom: 18px;
+    }
+
+    .project-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .project-list li {
+      display: flex;
+      gap: 10px;
+      color: var(--ink);
+      font-weight: 750;
+    }
+
+    .project-list li::before {
+      content: "→";
+      font-weight: 950;
+    }
+
+    /* EXPERIENCE */
+
+    .experience-grid {
+      margin-top: 36px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .job-card {
+      border: 3px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--card);
+      box-shadow: var(--shadow-small);
+      padding: clamp(22px, 4vw, 34px);
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 28px;
+    }
+
+    .job-card h3 {
+      font-size: clamp(1.7rem, 3vw, 2.6rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+    }
+
+    .job-company {
+      margin-top: 8px;
+      font-size: 1.1rem;
+      color: var(--muted);
+      font-weight: 850;
+    }
+
+    .job-date {
+      margin-top: 16px;
+      display: inline-flex;
+      border: 2px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: var(--yellow);
+      font-weight: 950;
+    }
+
+    .job-card ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .job-card li {
+      color: var(--muted);
+      font-size: 1.03rem;
+      font-weight: 650;
+      display: flex;
+      gap: 10px;
+    }
+
+    .job-card li::before {
+      content: "✦";
+      color: var(--ink);
+      font-weight: 950;
+    }
+
+    /* CONTACT */
+
+    .contact-card {
+      border: 3px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--yellow);
+      box-shadow: var(--shadow);
+      padding: clamp(26px, 5vw, 54px);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .contact-card h2 {
+      font-size: clamp(3rem, 7vw, 6.5rem);
+      line-height: 0.85;
+      letter-spacing: -0.08em;
+    }
+
+    .contact-card p {
+      margin-top: 20px;
+      color: #38321f;
+      font-size: 1.15rem;
+      font-weight: 700;
       max-width: 660px;
     }
 
-    footer {
-      padding: 34px 24px;
-      color: #77777f;
-      text-align: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    .contact-actions {
+      display: grid;
+      gap: 12px;
     }
+
+    .contact-actions .btn {
+      width: 100%;
+      background: var(--card);
+      justify-content: space-between;
+      font-size: 1rem;
+    }
+
+    footer {
+      padding: 32px 0;
+      text-align: center;
+      color: var(--muted);
+      font-weight: 750;
+    }
+
+    /* REVEAL ANIMATION */
 
     .reveal {
       opacity: 0;
-      transform: translateY(32px);
-      transition: opacity 0.75s ease, transform 0.75s ease;
+      transform: translateY(26px);
+      transition: 0.7s ease;
     }
 
     .reveal.visible {
@@ -435,289 +772,544 @@
       transform: translateY(0);
     }
 
+    /* RESPONSIVE */
+
     @media (max-width: 900px) {
+      .hero-grid,
+      .about-card,
+      .project-card,
+      .job-card,
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+
+      .project-art {
+        border-right: 0;
+        border-bottom: 3px solid var(--line);
+      }
+
+      .things-grid,
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
       .nav-links {
         display: none;
       }
 
-      .scene {
-        position: relative;
-        min-height: auto;
-        grid-template-columns: 1fr;
-        padding: 95px 24px;
+      .mobile-note {
+        display: block;
       }
 
-      .device-card {
-        min-height: 430px;
+      .hero {
+        padding-top: 50px;
       }
+    }
 
-      .cards,
-      .skills-grid {
+    @media (max-width: 620px) {
+      .things-grid,
+      .process-grid {
         grid-template-columns: 1fr;
       }
 
-      .timeline-item {
-        grid-template-columns: 1fr;
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-card {
+        transform: rotate(0);
+      }
+
+      .section-title,
+      .hero h1,
+      .contact-card h2 {
+        letter-spacing: -0.065em;
       }
     }
   </style>
 </head>
+
 <body>
-  <header class="nav">
-    <div class="nav-inner">
-      <a href="#top" class="brand">Ryan Thomas</a>
-      <nav class="nav-links">
-        <a href="#story">Story</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
+  <header class="nav-wrap">
+    <nav class="container">
+      <a class="logo" href="#top" aria-label="Back to top">
+        <span class="logo-mark">RT</span>
+        <span>Ryan Thomas</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about">Start Here</a></li>
+        <li><a href="#skills">Things I Do</a></li>
+        <li><a href="#process">How I Work</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <span class="mobile-note">Portfolio</span>
+    </nav>
   </header>
 
   <main id="top">
+    <!-- HERO -->
     <section class="hero">
-      <div class="hero-content">
-        <div class="eyebrow">Mechatronics Systems Engineering · Simon Fraser University</div>
-        <h1>Engineering practical systems from idea to implementation.</h1>
-        <p>
-          I am Ryan Thomas, a BASc Mechatronics Systems Engineering student focused on automation,
-          mechanical design, CAD, SCADA systems, prototyping, and manufacturing improvement.
-        </p>
-        <div class="buttons">
-          <a class="btn btn-primary" href="#projects">View Projects</a>
-          <a class="btn btn-secondary" href="https://github.com/rta74" target="_blank">GitHub</a>
-          <a class="btn btn-secondary" href="https://www.linkedin.com/in/ryan-thomas-7bb21a36a" target="_blank">LinkedIn</a>
-        </div>
-      </div>
-    </section>
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="pill">⚙️ Mechatronics Systems Engineering · SFU</div>
 
-    <section class="showcase" id="story">
-      <div class="scene">
-        <div class="scene-text">
-          <div class="scene-kicker">01 · Manufacturing Systems</div>
-          <h2>Turning scattered maintenance data into structured systems.</h2>
-          <p>
-            At Dometic, I supported SCADA preventative maintenance digitization by translating OEM manuals
-            and real shop-floor practices into standardized maintenance tasks across 200+ machines and benches.
+          <h1>
+            Simple, practical,
+            <span class="highlight-yellow">real-world</span>
+            engineering.
+          </h1>
+
+          <p class="hero-copy">
+            Hello, I’m Ryan. I build and analyze mechanical, electrical, and automation-focused systems with a practical, hands-on approach. I like work that is organized, useful, and built for real constraints — not just clean theory.
           </p>
-        </div>
-        <div class="device-card">
-          <div>
-            <h3>SCADA PM Digitization</h3>
-            <p>Maintenance datasets, asset hierarchy, automated tracking, task distribution, and analysis.</p>
-          </div>
-          <div class="metric-row">
-            <div class="metric"><strong>200+</strong><span>machines & benches</span></div>
-            <div class="metric"><strong>SCADA</strong><span>Ignition support</span></div>
-          </div>
-        </div>
-      </div>
 
-      <div class="scene">
-        <div class="scene-text">
-          <div class="scene-kicker">02 · Mechanical Design</div>
-          <h2>Designing real parts around real constraints.</h2>
-          <p>
-            My work includes a custom air-oil filtration and ventilation solution for warehouse air-barrier intake systems,
-            using Creo, real-world measurements, and constrained fit-up considerations.
-          </p>
-        </div>
-        <div class="device-card">
-          <div>
-            <h3>Air-Oil Filtration Retrofit</h3>
-            <p>Custom HVAC design, sheet metal thinking, filter fit, airflow leakage reduction, and practical installation constraints.</p>
-          </div>
-          <div class="metric-row">
-            <div class="metric"><strong>Creo</strong><span>3D mechanical design</span></div>
-            <div class="metric"><strong>DFM</strong><span>practical fabrication</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="scene">
-        <div class="scene-text">
-          <div class="scene-kicker">03 · Product Engineering</div>
-          <h2>Building assistive technology with purpose.</h2>
-          <p>
-            I led the product design of an automatic fetch machine to help persons with disabilities engage with their dogs,
-            applying SolidWorks, GD&T, DFM, DFA, circuit analysis, and prototyping.
-          </p>
-        </div>
-        <div class="device-card">
-          <div>
-            <h3>Auto Fetch</h3>
-            <p>Assistive product design with mechanical, electrical, safety, and manufacturability considerations.</p>
-          </div>
-          <div class="metric-row">
-            <div class="metric"><strong>GD&T</strong><span>design validation</span></div>
-            <div class="metric"><strong>DFA</strong><span>assembly improvement</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section reveal" id="projects">
-      <div class="section-heading">
-        <h2>Selected Projects</h2>
-        <p>Engineering projects that show design analysis, prototyping, simulation, testing, and technical communication.</p>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <h3>Characterization of Active Components</h3>
-          <p>
-            Characterized diodes, BJTs, and MOSFETs; validated parameters using I-V analysis, amplifier design,
-            LTspice frequency response simulation, oscilloscopes, function generators, DMMs, and power supplies.
-          </p>
-          <div class="tag-list">
-            <span class="tag">LTspice</span>
-            <span class="tag">Circuit Analysis</span>
-            <span class="tag">MOSFETs</span>
-            <span class="tag">BJTs</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Hydroelectric Dam Design & Analysis</h3>
-          <p>
-            Performed a full-cycle design analysis on a small-scale hydro dam, estimating theoretical and actual
-            power output while applying Bernoulli, Darcy-Weisbach, hydrostatic theory, and energy conversion analysis.
-          </p>
-          <div class="tag-list">
-            <span class="tag">Fluid Mechanics</span>
-            <span class="tag">Power Output</span>
-            <span class="tag">Head Loss</span>
-          </div>
-        </article>
-
-        <article class="card">
-          <h3>Bike Frame Analysis</h3>
-          <p>
-            Simulated FEA in SolidWorks to assess fatigue strength under heavy loads, identify failure conditions,
-            improve beam dimensions, and increase the safety factor by 2.5x.
-          </p>
-          <div class="tag-list">
-            <span class="tag">SolidWorks</span>
-            <span class="tag">FEA</span>
-            <span class="tag">Safety Factor</span>
-            <span class="tag">RCA</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="content-section reveal" id="experience">
-      <div class="section-heading">
-        <h2>Experience</h2>
-        <p>Technical and teamwork experience relevant to engineering internship, co-op, and entry-level project roles.</p>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="time">Sept 2025 — Apr 2026</div>
-          <div>
-            <h3>Maintenance Coordinator Co-op · Dometic</h3>
-            <p>
-              Led SCADA PM digitization, assisted Ignition scripting and logic, processed maintenance datasets,
-              and designed a custom air-oil filtration and ventilation solution for warehouse air-barrier systems.
-            </p>
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="#projects">View my work →</a>
+            <a class="btn btn-light" href="RyanResumeSpring2026.pdf" target="_blank">Download resume ↓</a>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="time">Sept 2022 — Present</div>
-          <div>
-            <h3>BASc Mechatronics Systems Engineering · Simon Fraser University</h3>
-            <p>
-              Coursework and projects spanning CAD, circuit design, mechanical analysis, controls, fluid mechanics,
-              prototyping, manufacturing principles, and engineering design communication.
-            </p>
+        <div class="hero-card reveal">
+          <div class="profile-box">
+            <div class="profile-top">
+              <div class="profile-face">RT</div>
+            </div>
+
+            <div class="profile-content">
+              <h2>Mechatronics student focused on automation, CAD, and practical systems.</h2>
+              <p>
+                Currently building experience in SCADA, preventative maintenance digitization, mechanical design, HVAC fit-up solutions, and technical project work.
+              </p>
+
+              <div class="stats">
+                <div class="stat">
+                  <span>Current focus</span>
+                  <span>Automation + Design</span>
+                </div>
+                <div class="stat">
+                  <span>Tools</span>
+                  <span>Creo, SolidWorks, Ignition</span>
+                </div>
+                <div class="stat">
+                  <span>Location</span>
+                  <span>New Westminster, BC</span>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="time">2018 — 2023</div>
-          <div>
-            <h3>Ice Hockey · New West Minor Hockey Association</h3>
-            <p>
-              Built communication, leadership, teamwork, and mentorship skills through years of competitive team experience.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section reveal" id="skills">
-      <div class="section-heading">
-        <h2>Technical Skills</h2>
-        <p>A focused engineering toolkit combining CAD, electrical systems, analysis, prototyping, and software.</p>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill">SolidWorks</div>
-        <div class="skill">Creo</div>
-        <div class="skill">AutoCAD</div>
-        <div class="skill">Ignition SCADA</div>
-        <div class="skill">MATLAB</div>
-        <div class="skill">C++</div>
-        <div class="skill">LTspice</div>
-        <div class="skill">Altium</div>
-        <div class="skill">GD&T</div>
-        <div class="skill">FEA</div>
-        <div class="skill">DFM / DFA</div>
-        <div class="skill">Soldering & Wiring</div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="contact-inner reveal">
-        <h2>Ready to contribute to practical engineering work.</h2>
-        <p>
-          I am looking for engineering co-op and internship opportunities where I can support design,
-          automation, manufacturing systems, prototyping, and technical problem-solving.
-        </p>
-        <div class="buttons">
-          <a class="btn btn-primary" href="mailto:rta74@sfu.ca">Email Me</a>
-          <a class="btn btn-secondary" href="https://github.com/rta74" target="_blank">GitHub</a>
-          <a class="btn btn-secondary" href="https://www.linkedin.com/in/ryan-thomas-7bb21a36a" target="_blank">LinkedIn</a>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>
+        SCADA ✦ CAD ✦ Mechanical Design ✦ Automation ✦ FEA ✦ Circuit Analysis ✦ MATLAB ✦ Creo ✦ SolidWorks ✦ Root Cause Analysis ✦
+      </span>
+      <span>
+        SCADA ✦ CAD ✦ Mechanical Design ✦ Automation ✦ FEA ✦ Circuit Analysis ✦ MATLAB ✦ Creo ✦ SolidWorks ✦ Root Cause Analysis ✦
+      </span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">Start Here</p>
+        <h2 class="section-title">I like turning messy problems into organized systems.</h2>
+      </div>
+
+      <div class="about-card reveal">
+        <div>
+          <h3>
+            Practical, hands-on, and
+            <span class="highlight-green">nonsense-free.</span>
+          </h3>
+        </div>
+
+        <div>
+          <p>
+            I’m a BASc Mechatronics Systems Engineering student at Simon Fraser University with experience across mechanical design, electrical systems, CAD, SCADA, and engineering analysis.
+          </p>
+
+          <p>
+            During my co-op at Dometic, I worked on digitizing preventative maintenance tasks for 200+ machines and benches, supported Ignition SCADA scripting and logic, organized large maintenance datasets, and designed a custom air-oil filtration and ventilation solution for warehouse intake systems.
+          </p>
+
+          <p>
+            I’m especially interested in engineering work that connects physical systems with automation, data organization, manufacturing needs, and real-world problem solving.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THINGS I DO -->
+  <section id="skills">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">Things I Do</p>
+        <h2 class="section-title">A focused mix of design, systems, and analysis.</h2>
+        <p class="section-copy">
+          I organize my skills by how I actually use them: designing parts, analyzing systems, supporting automation, and building practical solutions.
+        </p>
+      </div>
+
+      <div class="things-grid">
+        <article class="thing-card reveal">
+          <div class="thing-icon highlight-yellow">📐</div>
+          <h3>CAD & Mechanical Design</h3>
+          <p>
+            SolidWorks, Creo, AutoCAD, GD&T, sheet metal design, 3D modeling, assemblies, prototyping, DFM, and DFA.
+          </p>
+        </article>
+
+        <article class="thing-card reveal">
+          <div class="thing-icon highlight-blue">⚡</div>
+          <h3>Electrical & Circuit Analysis</h3>
+          <p>
+            LTspice, Altium, op-amps, diodes, MOSFETs, BJTs, soldering, wiring, active component analysis, and lab testing.
+          </p>
+        </article>
+
+        <article class="thing-card reveal">
+          <div class="thing-icon highlight-green">🖥️</div>
+          <h3>Automation & SCADA</h3>
+          <p>
+            Ignition, SCADA logic support, preventative maintenance digitization, data tracking, task organization, and system workflows.
+          </p>
+        </article>
+
+        <article class="thing-card reveal">
+          <div class="thing-icon highlight-pink">🔍</div>
+          <h3>Engineering Analysis</h3>
+          <p>
+            FEA, root cause analysis, safety factors, tolerance analysis, fluid mechanics, Bernoulli’s principle, and Darcy-Weisbach.
+          </p>
+        </article>
+
+        <article class="thing-card reveal">
+          <div class="thing-icon highlight-orange">🛠️</div>
+          <h3>Prototyping & Testing</h3>
+          <p>
+            3D printing, design iteration, physical measurements, constrained fit-up solutions, lab equipment, and hands-on troubleshooting.
+          </p>
+        </article>
+
+        <article class="thing-card reveal">
+          <div class="thing-icon highlight-purple">📊</div>
+          <h3>Technical Organization</h3>
+          <p>
+            Translating manuals, messy datasets, and practical requirements into clean systems that teams can actually use.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="container">
+      <div class="process-wrap reveal">
+        <p class="section-label">How I Work</p>
+        <h2 class="section-title">Whatever I’m building, I follow the same simple approach.</h2>
+
+        <div class="process-grid">
+          <article class="process-card">
+            <div class="process-num">1</div>
+            <h3>Understand the system</h3>
+            <p>
+              I start by clarifying the real problem, constraints, equipment, users, and expected outcome.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <div class="process-num">2</div>
+            <h3>Organize the details</h3>
+            <p>
+              I turn messy information, notes, manuals, or requirements into clear structures.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <div class="process-num">3</div>
+            <h3>Prototype and test</h3>
+            <p>
+              I use CAD, calculations, lab tools, simulations, and hands-on testing to validate ideas.
+            </p>
+          </article>
+
+          <article class="process-card">
+            <div class="process-num">4</div>
+            <h3>Improve with evidence</h3>
+            <p>
+              I refine based on feedback, safety factors, fit-up issues, data, and real operating conditions.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">Work</p>
+        <h2 class="section-title">A few things I’ve worked on recently.</h2>
+        <p class="section-copy">
+          These projects show my range across industrial systems, mechanical design, circuit analysis, product design, and engineering analysis.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- PROJECT 1 -->
+        <article class="project-card reveal">
+          <div class="project-art highlight-blue">
+            <div class="project-number">01</div>
+            <div class="project-highlight">200+ machines</div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="tag">SCADA</span>
+              <span class="tag">Ignition</span>
+              <span class="tag">Data Systems</span>
+              <span class="tag">Maintenance</span>
+            </div>
+
+            <h3>SCADA Preventative Maintenance Digitization</h3>
+
+            <p>
+              Led SCADA preventative maintenance digitization by translating OEM manuals and internal practices into standardized maintenance tasks across 200+ machines and benches.
+            </p>
+
+            <ul class="project-list">
+              <li>Organized maintenance datasets for tracking, distribution, and analysis.</li>
+              <li>Supported Ignition SCADA scripting and logic.</li>
+              <li>Helped turn paper/manual maintenance knowledge into a structured system.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- PROJECT 2 -->
+        <article class="project-card reveal">
+          <div class="project-art highlight-green">
+            <div class="project-number">02</div>
+            <div class="project-highlight">factory fit-up</div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="tag">Creo</span>
+              <span class="tag">HVAC</span>
+              <span class="tag">Mechanical Design</span>
+              <span class="tag">Sheet Metal</span>
+            </div>
+
+            <h3>Custom Air-Oil Filtration & Ventilation Solution</h3>
+
+            <p>
+              Designed a custom air-oil filtration and ventilation solution to help prevent oil condensation ingress in warehouse air-barrier intake systems.
+            </p>
+
+            <ul class="project-list">
+              <li>Used real-world measurements to design around constrained installations.</li>
+              <li>Created mechanical design solutions for non-standard fit-up issues.</li>
+              <li>Focused on practical manufacturability and serviceability.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- PROJECT 3 -->
+        <article class="project-card reveal">
+          <div class="project-art highlight-yellow">
+            <div class="project-number">03</div>
+            <div class="project-highlight">assistive design</div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="tag">SolidWorks</span>
+              <span class="tag">Product Design</span>
+              <span class="tag">DFM / DFA</span>
+              <span class="tag">Circuits</span>
+            </div>
+
+            <h3>Auto Fetch Assistive Device</h3>
+
+            <p>
+              Led the product design of an automatic fetch machine to help persons with disabilities engage with their dogs.
+            </p>
+
+            <ul class="project-list">
+              <li>Applied SolidWorks, GD&T, and prototyping for design validation.</li>
+              <li>Conducted circuit design and analysis for safe power usage.</li>
+              <li>Improved manufacturability through DFM and DFA principles.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- PROJECT 4 -->
+        <article class="project-card reveal">
+          <div class="project-art highlight-pink">
+            <div class="project-number">04</div>
+            <div class="project-highlight">2.5x safety factor</div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="tag">FEA</span>
+              <span class="tag">SolidWorks</span>
+              <span class="tag">RCA</span>
+              <span class="tag">Structural Analysis</span>
+            </div>
+
+            <h3>Bike Frame FEA Analysis</h3>
+
+            <p>
+              Simulated bike frame fatigue strength under heavy loads, identified failure conditions, and evaluated feasibility using engineering analysis.
+            </p>
+
+            <ul class="project-list">
+              <li>Implemented design modifications to reduce stress.</li>
+              <li>Increased safety factor by 2.5x through beam dimension changes.</li>
+              <li>Used root cause analysis to evaluate faults and potential failures.</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- PROJECT 5 -->
+        <article class="project-card reveal">
+          <div class="project-art highlight-orange">
+            <div class="project-number">05</div>
+            <div class="project-highlight">energy analysis</div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="tag">Fluid Mechanics</span>
+              <span class="tag">Bernoulli</span>
+              <span class="tag">Darcy-Weisbach</span>
+              <span class="tag">Sustainability</span>
+            </div>
+
+            <h3>Hydroelectric Dam Design & Analysis</h3>
+
+            <p>
+              Performed full-cycle design analysis on a small-scale hydro dam to evaluate power generation potential and improve sustainability.
+            </p>
+
+            <ul class="project-list">
+              <li>Estimated theoretical and actual power outputs.</li>
+              <li>Applied Bernoulli’s principle, Darcy-Weisbach, and hydrostatic theory.</li>
+              <li>Recommended improvements to reduce friction loss and improve energy capture.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">Experience</p>
+        <h2 class="section-title">Where I’ve applied this.</h2>
+      </div>
+
+      <div class="experience-grid">
+        <article class="job-card reveal">
+          <div>
+            <h3>Maintenance Coordinator Co-op</h3>
+            <p class="job-company">Dometic · Vancouver, BC</p>
+            <p class="job-date">Sept 2025 – Apr 2026</p>
+          </div>
+
+          <ul>
+            <li>Led SCADA preventative maintenance digitization across 200+ machines and benches.</li>
+            <li>Translated OEM manuals and maintenance practices into standardized tasks.</li>
+            <li>Assisted Ignition SCADA scripting and logic while processing large maintenance datasets.</li>
+            <li>Designed a custom air-oil filtration and ventilation solution for warehouse intake systems.</li>
+          </ul>
+        </article>
+
+        <article class="job-card reveal">
+          <div>
+            <h3>Host Services</h3>
+            <p class="job-company">Boston Pizza · New Westminster, BC</p>
+            <p class="job-date">June 2021 – Present</p>
+          </div>
+
+          <ul>
+            <li>Handle phone and online orders, packing, and order confirmation.</li>
+            <li>Support servers, management, customers, and general guest services.</li>
+            <li>Built strong communication, teamwork, and organization in a fast-paced environment.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-card reveal">
+        <div>
+          <p class="section-label">Contact</p>
+          <h2>Let’s work together.</h2>
+          <p>
+            I’m open to co-op, internship, and early-career engineering opportunities involving automation, mechanical design, manufacturing, SCADA systems, and mechatronics.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn" href="mailto:rta74@sfu.ca">Email me <span>→</span></a>
+          <a class="btn" href="https://www.linkedin.com/in/ryan-thomas-7bb21a36a" target="_blank">LinkedIn <span>→</span></a>
+          <a class="btn" href="https://github.com/rta74" target="_blank">GitHub <span>→</span></a>
+          <a class="btn" href="RyanResumeSpring2026.pdf" target="_blank">Resume <span>↓</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2026 Ryan Thomas · Mechatronics Engineering Portfolio</p>
+    <div class="container">
+      © <span id="year"></span> Ryan Thomas. Built for practical engineering work.
+    </div>
   </footer>
 
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.25 });
+    const year = document.getElementById("year");
+    year.textContent = new Date().getFullYear();
 
-    document.querySelectorAll('.scene, .reveal').forEach((el) => observer.observe(el));
+    const revealElements = document.querySelectorAll(".reveal");
 
-    // PARALLAX + SCROLL ANIMATION
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.12
+      }
+    );
 
-      document.querySelectorAll('.device-card').forEach((card, i) => {
-        const speed = 0.05 + i * 0.02;
-        card.style.transform = `translateY(${scrollY * speed * -1}px) scale(1)`;
-      });
-
-      document.querySelectorAll('.scene-text').forEach((text, i) => {
-        const speed = 0.03 + i * 0.01;
-        text.style.transform = `translateY(${scrollY * speed * -1}px)`;
-      });
-    });
-
-    //
+    revealElements.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
-
