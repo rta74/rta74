@@ -3,13 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ryan | Engineering Portfolio</title>
+  <title>Ryan Thomas | Mechatronics Engineering Portfolio</title>
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    :root {
+      --bg: #000000;
+      --panel: #101014;
+      --panel-soft: rgba(255, 255, 255, 0.065);
+      --text: #f5f5f7;
+      --muted: #a1a1aa;
+      --blue: #2997ff;
+      --border: rgba(255, 255, 255, 0.11);
     }
 
     html {
@@ -17,9 +27,10 @@
     }
 
     body {
-      background: #030303;
-      color: #f5f5f7;
-      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      overflow-x: hidden;
     }
 
     a {
@@ -27,18 +38,19 @@
       text-decoration: none;
     }
 
-    .navbar {
+    .nav {
       position: fixed;
       top: 0;
+      left: 0;
       width: 100%;
-      z-index: 1000;
-      backdrop-filter: blur(20px);
-      background: rgba(10, 10, 10, 0.72);
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.68);
+      backdrop-filter: blur(24px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    .nav-content {
-      max-width: 1120px;
+    .nav-inner {
+      max-width: 1180px;
       margin: auto;
       padding: 14px 24px;
       display: flex;
@@ -46,203 +58,286 @@
       align-items: center;
     }
 
-    .logo {
+    .brand {
+      font-size: 17px;
       font-weight: 700;
       letter-spacing: -0.03em;
-      font-size: 18px;
     }
 
-    nav a {
-      margin-left: 24px;
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      font-size: 13.5px;
       color: #c7c7cc;
-      font-size: 14px;
       transition: color 0.2s ease;
     }
 
-    nav a:hover {
-      color: #ffffff;
+    .nav-links a:hover {
+      color: white;
     }
 
     .hero {
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 120px 24px 80px;
+      display: grid;
+      place-items: center;
+      padding: 120px 24px 70px;
       text-align: center;
       background:
-        radial-gradient(circle at top, rgba(41, 121, 255, 0.25), transparent 32%),
-        radial-gradient(circle at bottom right, rgba(120, 119, 198, 0.16), transparent 28%),
-        #030303;
+        radial-gradient(circle at 50% 15%, rgba(41, 151, 255, 0.36), transparent 28%),
+        radial-gradient(circle at 80% 80%, rgba(88, 86, 214, 0.24), transparent 30%),
+        #000;
     }
 
     .hero-content {
-      max-width: 900px;
+      max-width: 980px;
+      animation: heroRise 1s ease both;
+    }
+
+    @keyframes heroRise {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .eyebrow {
-      color: #8ab4ff;
-      font-size: 15px;
-      font-weight: 600;
-      margin-bottom: 14px;
-      letter-spacing: 0.02em;
+      color: var(--blue);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: 0.01em;
     }
 
-    .hero h1 {
-      font-size: clamp(48px, 9vw, 96px);
-      line-height: 0.95;
-      letter-spacing: -0.075em;
-      margin-bottom: 24px;
+    h1 {
+      font-size: clamp(50px, 9.5vw, 112px);
+      line-height: 0.92;
+      letter-spacing: -0.082em;
+      margin-bottom: 26px;
     }
 
     .hero p {
-      max-width: 720px;
+      max-width: 780px;
       margin: 0 auto 34px;
-      color: #c7c7cc;
-      font-size: clamp(18px, 2vw, 24px);
-      letter-spacing: -0.025em;
+      color: #d1d1d6;
+      font-size: clamp(19px, 2.1vw, 26px);
+      letter-spacing: -0.03em;
     }
 
-    .hero-actions {
+    .buttons {
       display: flex;
-      gap: 14px;
       justify-content: center;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
-    .button {
+    .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 150px;
+      min-width: 148px;
       padding: 13px 22px;
       border-radius: 999px;
       font-size: 15px;
-      font-weight: 600;
-      transition: transform 0.2s ease, background 0.2s ease, border 0.2s ease;
+      font-weight: 650;
+      transition: transform 0.25s ease, background 0.25s ease, border 0.25s ease;
     }
 
-    .button:hover {
+    .btn:hover {
       transform: translateY(-2px);
     }
 
-    .primary {
-      background: #0071e3;
+    .btn-primary {
+      background: var(--blue);
       color: white;
     }
 
-    .primary:hover {
-      background: #147ce5;
+    .btn-primary:hover {
+      background: #0077ed;
     }
 
-    .secondary {
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.06);
       border: 1px solid rgba(255, 255, 255, 0.22);
-      color: #f5f5f7;
-      background: rgba(255, 255, 255, 0.04);
+      color: white;
     }
 
-    section {
-      max-width: 1120px;
-      margin: auto;
-      padding: 90px 24px;
+    .showcase {
+      position: relative;
+      background: #000;
     }
 
-    .section-header {
-      margin-bottom: 34px;
-    }
-
-    .section-header h2 {
-      font-size: clamp(34px, 5vw, 56px);
-      letter-spacing: -0.055em;
-      line-height: 1;
-      margin-bottom: 12px;
-    }
-
-    .section-header p {
-      color: #a1a1aa;
-      font-size: 18px;
-      max-width: 720px;
-    }
-
-    .about-grid {
+    .scene {
+      min-height: 115vh;
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 22px;
+      grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+      gap: 42px;
+      align-items: center;
+      max-width: 1180px;
+      margin: auto;
+      padding: 110px 24px;
+      position: sticky;
+      top: 0;
     }
 
-    .panel {
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.035));
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 28px;
-      padding: 32px;
-      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+    .scene-text {
+      opacity: 0;
+      transform: translateY(40px) scale(0.98);
+      transition: opacity 0.8s ease, transform 0.8s ease;
     }
 
-    .panel p {
-      color: #d1d1d6;
-      font-size: 17px;
-      margin-bottom: 16px;
+    .scene.visible .scene-text {
+      opacity: 1;
+      transform: translateY(0) scale(1);
     }
 
-    .stat {
+    .scene-kicker {
+      color: var(--blue);
+      font-weight: 750;
+      margin-bottom: 14px;
+    }
+
+    .scene h2 {
+      font-size: clamp(38px, 6vw, 76px);
+      line-height: 0.96;
+      letter-spacing: -0.07em;
       margin-bottom: 22px;
     }
 
-    .stat strong {
+    .scene p {
+      color: #c7c7cc;
+      font-size: clamp(18px, 1.8vw, 22px);
+      letter-spacing: -0.025em;
+      max-width: 560px;
+    }
+
+    .device-card {
+      min-height: 520px;
+      border-radius: 44px;
+      padding: 34px;
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.04)),
+        radial-gradient(circle at 30% 15%, rgba(41, 151, 255, 0.26), transparent 32%);
+      border: 1px solid var(--border);
+      box-shadow: 0 40px 120px rgba(0, 0, 0, 0.55);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      opacity: 0;
+      transform: translateY(60px) rotateX(8deg) scale(0.94);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+
+    .scene.visible .device-card {
+      opacity: 1;
+      transform: translateY(0) rotateX(0) scale(1);
+    }
+
+    .device-card h3 {
+      font-size: 29px;
+      letter-spacing: -0.05em;
+      margin-bottom: 12px;
+    }
+
+    .device-card p {
+      font-size: 16px;
+      color: #d1d1d6;
+    }
+
+    .metric-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .metric {
+      padding: 20px;
+      border-radius: 24px;
+      background: rgba(0, 0, 0, 0.32);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .metric strong {
       display: block;
-      font-size: 34px;
+      font-size: 28px;
       letter-spacing: -0.05em;
     }
 
-    .stat span {
+    .metric span {
       color: #a1a1aa;
+      font-size: 13px;
+    }
+
+    .content-section {
+      max-width: 1180px;
+      margin: auto;
+      padding: 105px 24px;
+    }
+
+    .section-heading {
+      margin-bottom: 38px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(38px, 5.5vw, 70px);
+      letter-spacing: -0.07em;
+      line-height: 0.98;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 19px;
+      max-width: 760px;
     }
 
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 20px;
     }
 
     .card {
-      min-height: 280px;
-      background: #111113;
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      border-radius: 30px;
+      min-height: 330px;
       padding: 28px;
-      transition: transform 0.25s ease, border 0.25s ease, background 0.25s ease;
+      border-radius: 34px;
+      background: var(--panel-soft);
+      border: 1px solid var(--border);
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(0, 113, 227, 0.65);
-      background: #16161a;
+      transform: translateY(-7px);
+      border-color: rgba(41, 151, 255, 0.72);
+      background: rgba(255, 255, 255, 0.09);
     }
 
     .card h3 {
-      font-size: 24px;
-      letter-spacing: -0.04em;
-      margin-bottom: 12px;
+      font-size: 25px;
+      letter-spacing: -0.05em;
+      line-height: 1.05;
+      margin-bottom: 13px;
     }
 
     .card p {
-      color: #b7b7bd;
-      margin-bottom: 18px;
+      color: #c7c7cc;
+      font-size: 15.5px;
     }
 
     .tag-list {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 18px;
+      margin-top: 20px;
     }
 
     .tag {
-      font-size: 12px;
       padding: 6px 10px;
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.08);
-      color: #d1d1d6;
+      color: #e5e5ea;
+      font-size: 12px;
     }
 
     .timeline {
@@ -252,101 +347,127 @@
 
     .timeline-item {
       display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 22px;
-      padding: 24px;
-      border-radius: 24px;
-      background: rgba(255, 255, 255, 0.055);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      grid-template-columns: 230px 1fr;
+      gap: 28px;
+      padding: 28px;
+      border-radius: 30px;
+      background: var(--panel-soft);
+      border: 1px solid var(--border);
     }
 
-    .timeline-date {
-      color: #8ab4ff;
-      font-weight: 700;
+    .time {
+      color: var(--blue);
+      font-weight: 760;
     }
 
     .timeline-item h3 {
-      font-size: 21px;
+      font-size: 24px;
+      letter-spacing: -0.04em;
       margin-bottom: 8px;
-      letter-spacing: -0.035em;
     }
 
     .timeline-item p {
       color: #c7c7cc;
     }
 
-    .skills {
+    .skills-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 14px;
     }
 
     .skill {
-      padding: 18px;
+      text-align: center;
+      padding: 20px;
+      border-radius: 22px;
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 18px;
-      text-align: center;
-      color: #e5e5ea;
-      font-weight: 600;
+      font-weight: 700;
+      color: #f5f5f7;
     }
 
-    .contact-panel {
+    .contact {
       text-align: center;
+      padding: 110px 24px 120px;
       background:
-        radial-gradient(circle at top left, rgba(0, 113, 227, 0.25), transparent 32%),
-        linear-gradient(145deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.035));
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 34px;
-      padding: 54px 30px;
+        radial-gradient(circle at top, rgba(41, 151, 255, 0.24), transparent 28%),
+        #000;
     }
 
-    .contact-panel h2 {
-      font-size: clamp(36px, 5vw, 58px);
-      letter-spacing: -0.055em;
-      margin-bottom: 12px;
+    .contact-inner {
+      max-width: 850px;
+      margin: auto;
+      padding: 60px 30px;
+      border-radius: 42px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.035));
+      border: 1px solid var(--border);
     }
 
-    .contact-panel p {
+    .contact h2 {
+      font-size: clamp(40px, 6vw, 76px);
+      letter-spacing: -0.075em;
+      line-height: 0.96;
+      margin-bottom: 16px;
+    }
+
+    .contact p {
       color: #c7c7cc;
-      font-size: 18px;
-      margin-bottom: 24px;
+      font-size: 19px;
+      margin: 0 auto 28px;
+      max-width: 660px;
     }
 
     footer {
       padding: 34px 24px;
-      text-align: center;
       color: #77777f;
+      text-align: center;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    @media (max-width: 850px) {
-      nav {
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
         display: none;
       }
 
-      .about-grid,
+      .scene {
+        position: relative;
+        min-height: auto;
+        grid-template-columns: 1fr;
+        padding: 95px 24px;
+      }
+
+      .device-card {
+        min-height: 430px;
+      }
+
       .cards,
-      .skills {
+      .skills-grid {
         grid-template-columns: 1fr;
       }
 
       .timeline-item {
         grid-template-columns: 1fr;
       }
-
-      section {
-        padding: 70px 20px;
-      }
     }
   </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="nav-content">
-      <a href="#top" class="logo">Ryan</a>
-      <nav>
-        <a href="#about">About</a>
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand">Ryan Thomas</a>
+      <nav class="nav-links">
+        <a href="#story">Story</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
@@ -358,170 +479,230 @@
   <main id="top">
     <section class="hero">
       <div class="hero-content">
-        <div class="eyebrow">Engineering Portfolio</div>
-        <h1>Designing practical systems with purpose.</h1>
+        <div class="eyebrow">Mechatronics Systems Engineering · Simon Fraser University</div>
+        <h1>Engineering practical systems from idea to implementation.</h1>
         <p>
-          I am Ryan, a mechatronics engineering student building hands-on experience in automation,
-          mechanical design, manufacturing systems, controls, and data-driven engineering tools.
+          I am Ryan Thomas, a BASc Mechatronics Systems Engineering student focused on automation,
+          mechanical design, CAD, SCADA systems, prototyping, and manufacturing improvement.
         </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">View Projects</a>
-          <a class="button secondary" href="https://github.com/rta74" target="_blank">GitHub</a>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-secondary" href="https://github.com/rta74" target="_blank">GitHub</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/ryan-thomas-7bb21a36a" target="_blank">LinkedIn</a>
         </div>
       </div>
     </section>
 
-    <section id="about">
-      <div class="section-header">
-        <h2>About</h2>
-        <p>A clean snapshot of who I am, what I build, and what I can bring to an engineering team.</p>
-      </div>
-
-      <div class="about-grid">
-        <div class="panel">
+    <section class="showcase" id="story">
+      <div class="scene">
+        <div class="scene-text">
+          <div class="scene-kicker">01 · Manufacturing Systems</div>
+          <h2>Turning scattered maintenance data into structured systems.</h2>
           <p>
-            I am interested in engineering roles where I can combine mechanical design, automation,
-            technical problem-solving, and real-world implementation. My experience includes hands-on
-            project work, manufacturing support, data organization, CAD, testing, and system-level thinking.
-          </p>
-          <p>
-            I enjoy turning messy or unclear problems into organized systems, whether that means improving
-            a physical design, documenting a workflow, analyzing technical data, or building tools that make
-            engineering work easier to understand and maintain.
+            At Dometic, I supported SCADA preventative maintenance digitization by translating OEM manuals
+            and real shop-floor practices into standardized maintenance tasks across 200+ machines and benches.
           </p>
         </div>
+        <div class="device-card">
+          <div>
+            <h3>SCADA PM Digitization</h3>
+            <p>Maintenance datasets, asset hierarchy, automated tracking, task distribution, and analysis.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>200+</strong><span>machines & benches</span></div>
+            <div class="metric"><strong>SCADA</strong><span>Ignition support</span></div>
+          </div>
+        </div>
+      </div>
 
-        <div class="panel">
-          <div class="stat">
-            <strong>Mechatronics</strong>
-            <span>Engineering background</span>
+      <div class="scene">
+        <div class="scene-text">
+          <div class="scene-kicker">02 · Mechanical Design</div>
+          <h2>Designing real parts around real constraints.</h2>
+          <p>
+            My work includes a custom air-oil filtration and ventilation solution for warehouse air-barrier intake systems,
+            using Creo, real-world measurements, and constrained fit-up considerations.
+          </p>
+        </div>
+        <div class="device-card">
+          <div>
+            <h3>Air-Oil Filtration Retrofit</h3>
+            <p>Custom HVAC design, sheet metal thinking, filter fit, airflow leakage reduction, and practical installation constraints.</p>
           </div>
-          <div class="stat">
-            <strong>Hands-on</strong>
-            <span>Design, testing, and implementation</span>
+          <div class="metric-row">
+            <div class="metric"><strong>Creo</strong><span>3D mechanical design</span></div>
+            <div class="metric"><strong>DFM</strong><span>practical fabrication</span></div>
           </div>
-          <div class="stat">
-            <strong>Career Goal</strong>
-            <span>Engineering co-op / internship roles</span>
+        </div>
+      </div>
+
+      <div class="scene">
+        <div class="scene-text">
+          <div class="scene-kicker">03 · Product Engineering</div>
+          <h2>Building assistive technology with purpose.</h2>
+          <p>
+            I led the product design of an automatic fetch machine to help persons with disabilities engage with their dogs,
+            applying SolidWorks, GD&T, DFM, DFA, circuit analysis, and prototyping.
+          </p>
+        </div>
+        <div class="device-card">
+          <div>
+            <h3>Auto Fetch</h3>
+            <p>Assistive product design with mechanical, electrical, safety, and manufacturability considerations.</p>
+          </div>
+          <div class="metric-row">
+            <div class="metric"><strong>GD&T</strong><span>design validation</span></div>
+            <div class="metric"><strong>DFA</strong><span>assembly improvement</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="projects">
-      <div class="section-header">
+    <section class="content-section reveal" id="projects">
+      <div class="section-heading">
         <h2>Selected Projects</h2>
-        <p>Project cards can be linked to GitHub, reports, images, or live demos once they are ready.</p>
+        <p>Engineering projects that show design analysis, prototyping, simulation, testing, and technical communication.</p>
       </div>
 
       <div class="cards">
         <article class="card">
-          <h3>SCADA & Asset Management</h3>
+          <h3>Characterization of Active Components</h3>
           <p>
-            Organized equipment data, asset hierarchy, preventative maintenance details, and workflow
-            information to support a more structured manufacturing maintenance system.
+            Characterized diodes, BJTs, and MOSFETs; validated parameters using I-V analysis, amplifier design,
+            LTspice frequency response simulation, oscilloscopes, function generators, DMMs, and power supplies.
           </p>
           <div class="tag-list">
-            <span class="tag">SCADA</span>
-            <span class="tag">Data Management</span>
-            <span class="tag">Manufacturing</span>
+            <span class="tag">LTspice</span>
+            <span class="tag">Circuit Analysis</span>
+            <span class="tag">MOSFETs</span>
+            <span class="tag">BJTs</span>
           </div>
         </article>
 
         <article class="card">
-          <h3>Assistive Fetch Machine</h3>
+          <h3>Hydroelectric Dam Design & Analysis</h3>
           <p>
-            Designed and prototyped an assistive fetch machine to help individuals with disabilities engage
-            with their pets through a more accessible play experience.
+            Performed a full-cycle design analysis on a small-scale hydro dam, estimating theoretical and actual
+            power output while applying Bernoulli, Darcy-Weisbach, hydrostatic theory, and energy conversion analysis.
           </p>
           <div class="tag-list">
-            <span class="tag">Mechanical Design</span>
-            <span class="tag">Prototyping</span>
-            <span class="tag">Assistive Tech</span>
+            <span class="tag">Fluid Mechanics</span>
+            <span class="tag">Power Output</span>
+            <span class="tag">Head Loss</span>
           </div>
         </article>
 
         <article class="card">
-          <h3>Air Filtration Retrofit</h3>
+          <h3>Bike Frame Analysis</h3>
           <p>
-            Worked on a ventilation retrofit concept for factory air barriers, including design iteration,
-            filter fit improvement, and airflow leakage considerations.
+            Simulated FEA in SolidWorks to assess fatigue strength under heavy loads, identify failure conditions,
+            improve beam dimensions, and increase the safety factor by 2.5x.
           </p>
           <div class="tag-list">
-            <span class="tag">CAD</span>
-            <span class="tag">HVAC</span>
-            <span class="tag">Design Testing</span>
+            <span class="tag">SolidWorks</span>
+            <span class="tag">FEA</span>
+            <span class="tag">Safety Factor</span>
+            <span class="tag">RCA</span>
           </div>
         </article>
       </div>
     </section>
 
-    <section id="experience">
-      <div class="section-header">
+    <section class="content-section reveal" id="experience">
+      <div class="section-heading">
         <h2>Experience</h2>
-        <p>Use this section to show engineering employers what you have actually done.</p>
+        <p>Technical and teamwork experience relevant to engineering internship, co-op, and entry-level project roles.</p>
       </div>
 
       <div class="timeline">
         <div class="timeline-item">
-          <div class="timeline-date">Recent</div>
+          <div class="time">Sept 2025 — Apr 2026</div>
           <div>
-            <h3>Engineering / Manufacturing Experience</h3>
+            <h3>Maintenance Coordinator Co-op · Dometic</h3>
             <p>
-              Supported manufacturing systems through asset organization, maintenance documentation,
-              technical data cleanup, and practical workflow improvements.
+              Led SCADA PM digitization, assisted Ignition scripting and logic, processed maintenance datasets,
+              and designed a custom air-oil filtration and ventilation solution for warehouse air-barrier systems.
             </p>
           </div>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-date">Projects</div>
+          <div class="time">Sept 2022 — Present</div>
           <div>
-            <h3>Mechanical and Mechatronics Design</h3>
+            <h3>BASc Mechatronics Systems Engineering · Simon Fraser University</h3>
             <p>
-              Built experience with CAD, prototyping, controls concepts, design iteration, testing,
-              and engineering communication through academic and personal projects.
+              Coursework and projects spanning CAD, circuit design, mechanical analysis, controls, fluid mechanics,
+              prototyping, manufacturing principles, and engineering design communication.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="time">2018 — 2023</div>
+          <div>
+            <h3>Ice Hockey · New West Minor Hockey Association</h3>
+            <p>
+              Built communication, leadership, teamwork, and mentorship skills through years of competitive team experience.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="skills">
-      <div class="section-header">
-        <h2>Skills</h2>
-        <p>Keep this section clean and job-focused. Add or remove skills based on each application.</p>
+    <section class="content-section reveal" id="skills">
+      <div class="section-heading">
+        <h2>Technical Skills</h2>
+        <p>A focused engineering toolkit combining CAD, electrical systems, analysis, prototyping, and software.</p>
       </div>
 
-      <div class="skills">
-        <div class="skill">CAD</div>
-        <div class="skill">Manufacturing</div>
-        <div class="skill">Automation</div>
-        <div class="skill">SCADA</div>
-        <div class="skill">Data Analysis</div>
-        <div class="skill">Prototyping</div>
-        <div class="skill">Controls</div>
-        <div class="skill">Technical Writing</div>
+      <div class="skills-grid">
+        <div class="skill">SolidWorks</div>
+        <div class="skill">Creo</div>
+        <div class="skill">AutoCAD</div>
+        <div class="skill">Ignition SCADA</div>
+        <div class="skill">MATLAB</div>
+        <div class="skill">C++</div>
+        <div class="skill">LTspice</div>
+        <div class="skill">Altium</div>
+        <div class="skill">GD&T</div>
+        <div class="skill">FEA</div>
+        <div class="skill">DFM / DFA</div>
+        <div class="skill">Soldering & Wiring</div>
       </div>
     </section>
 
-    <section id="contact">
-      <div class="contact-panel">
-        <h2>Let’s build something useful.</h2>
+    <section class="contact" id="contact">
+      <div class="contact-inner reveal">
+        <h2>Ready to contribute to practical engineering work.</h2>
         <p>
-          I am currently looking for engineering internship and co-op opportunities where I can contribute,
-          learn quickly, and support practical technical work.
+          I am looking for engineering co-op and internship opportunities where I can support design,
+          automation, manufacturing systems, prototyping, and technical problem-solving.
         </p>
-        <div class="hero-actions">
-          <a class="button primary" href="mailto:your.email@example.com">Email Me</a>
-          <a class="button secondary" href="https://github.com/rta74" target="_blank">View GitHub</a>
+        <div class="buttons">
+          <a class="btn btn-primary" href="mailto:rta74@sfu.ca">Email Me</a>
+          <a class="btn btn-secondary" href="https://github.com/rta74" target="_blank">GitHub</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/ryan-thomas-7bb21a36a" target="_blank">LinkedIn</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2026 Ryan. Designed and built as a personal engineering portfolio.</p>
+    <p>© 2026 Ryan Thomas · Mechatronics Engineering Portfolio</p>
   </footer>
-</body>
-</html>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.35
+    });
+
+    document.querySelectorAll('.scene, .reveal').forEach((element) => {
+      observer.observe(element);
+    });
+  </script>
